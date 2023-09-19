@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { colorBlackDark, colorPrimary } from "../UI/variables";
 import logo from '../../assets/img/logo.png';
 import { Logo } from "../UI";
@@ -16,7 +17,9 @@ const StyledHeader = styled.header`
 const Header = () => {
     return (
         <StyledHeader>
-            <Logo src={logo} marginleft='2.5rem' width='12rem' />
+            <Link to={'/'}>
+                <Logo src={logo} marginleft='2.5rem' width='12rem' />
+            </Link>
         </StyledHeader>
     );
 }
