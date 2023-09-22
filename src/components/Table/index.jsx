@@ -1,5 +1,9 @@
+import { useContext } from 'react';
 import styled from 'styled-components';
+import { DataContext } from "../../context/DataContext";
+import { deleteCategoryAxios } from '../../api/api';
 import { colorBlackDark, colorGrayLight, colorGrayMedium, colorPrimary } from '../UI/variables';
+import { Link } from 'react-router-dom';
 
 const TableContainer = styled.div`
     padding: 0 2.5rem;
@@ -12,7 +16,7 @@ const StyledTable = styled.table`
   /* outline-color: ${colorPrimary}; */
 
   th, td {
-    padding: 8px;
+    padding: 18px 8px;
   }
 
   th {
@@ -27,73 +31,71 @@ const StyledTable = styled.table`
     font-size: 1.5rem;
     font-weight: 300;
   }
+  
+  .center {
+    text-align: center;
+  }
 
-  button {
+`;
+
+const StyledBtn = styled.button`
+    width: 100%;
+    text-align: center;
     font-size: 1.5rem;
     font-weight: 300;
     background: none;
     border: none;
     cursor: pointer;
-  }
+`;
+
+const StyledDiv = styled.div`
+    border-bottom: 2px solid ${({color}) => color};
+    padding-bottom: .75rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: fit-content;
 `;
 
 const Table = () => {
-  return (
-    <TableContainer>
-        <StyledTable>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Editar</th>
-                    <th>Remover</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Item 1</td>
-                    <td>Descripción del Item 1</td>
-                    <td>
-                        <button>Editar</button>
-                    </td>
-                    <td>
-                        <button>Remover</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Item 2</td>
-                    <td>Descripción del Item 2</td>
-                    <td>
-                        <button>Editar</button>
-                    </td>
-                    <td>
-                        <button>Remover</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Item 3</td>
-                    <td>Descripción del Item 3</td>
-                    <td>
-                        <button>Editar</button>
-                    </td>
-                    <td>
-                        <button>Remover</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Item 4</td>
-                    <td>Descripción del Item 4</td>
-                    <td>
-                        <button>Editar</button>
-                    </td>
-                    <td>
-                        <button>Remover</button>
-                    </td>
-                </tr>
-            </tbody>
-        </StyledTable>
-    </TableContainer>
-  );
+
+    const { categories } = useContext(DataContext);
+
+    const handleDelete = (id) => {
+        deleteCategoryAxios(id);
+    }
+
+    return (
+        <TableContainer>
+            <StyledTable>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th className='center'>Editar</th>
+                        <th className='center'>Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {categories.map((cat, i) => {
+                        return (
+                            <tr key={i}>
+                                <td><StyledDiv color={cat.color}>{cat.name}</StyledDiv></td>
+                                <td>{cat.description}</td>
+                                <td>
+                                    <Link to={`/update-category/${cat.id}`}>
+                                        <StyledBtn type='button'>Editar</StyledBtn>
+                                    </Link>
+                                </td>
+                                <td>
+                                    <StyledBtn type='button' onClick={() => handleDelete(cat.id)}>Remover</StyledBtn>
+                                </td>
+                            </tr>
+                        );
+                    })}
+                </tbody>
+            </StyledTable>
+        </TableContainer>
+    );
 }
 
 export default Table;
