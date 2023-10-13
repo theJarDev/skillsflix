@@ -8,9 +8,9 @@ const StyledHeader = styled.header`
     display: flex;
     align-items: center;
     /* background-color: ${colorBlackDark}; */
-    background-color: #000;
+    background-color: #090910;
     width: 100%;
-    height: 5.75rem;
+    height: 5.875rem;
     border-bottom: 2px solid ${colorPrimary};
 `;
 

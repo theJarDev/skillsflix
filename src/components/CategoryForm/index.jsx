@@ -10,6 +10,7 @@ import { nameValidation, descriptionValidation, colorValidation, idValidation } 
 export const StyledForm = styled.form`
     width: 100%;
     padding: 3rem 2.5rem;
+    text-align: center;
 
     .flex-buttons {
         display: flex;

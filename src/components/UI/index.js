@@ -7,13 +7,14 @@ export const Logo = styled.img`
 `;
 
 export const TitleBig = styled.h2`
-    width: ${({width}) => width};
-    padding: .75rem;
+    width: ${({width}) => width };
+    padding: 1rem;
     margin-bottom: ${({marginbottom}) => marginbottom };
     text-align: center;
     font-size: 3.75rem;
     font-weight: 400;
-    background-color: ${({background}) => background && colorFrontEnd};
+    background-color: ${({background}) => background };
+    border-radius: 0.25rem;
 `;
 
 export const TitleMedium = styled.h3`
@@ -28,6 +29,7 @@ export const TitleSmall = styled.h4`
     font-weight: 400;
     text-align: center;
     padding: .5rem 1rem;
+    border-radius: 0.25rem;
 `;
 
 export const Btn = styled.button`

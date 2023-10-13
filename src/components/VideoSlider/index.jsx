@@ -1,0 +1,67 @@
+import Slider from "react-slick";
+import styled from "styled-components";
+// import 'slick-carousel/slick/slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import VideoCard from "../VideoCard";
+import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
+
+const StyledDiv = styled.div`
+  width: 100%;
+  padding-right: 2.5rem;
+`;
+
+//, height: '100%', width: '1.5rem', display: 'flex', alignItems: 'center'
+
+const SampleNextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, height: '100%', width: '1.5rem', display: 'flex', alignItems: 'center'}}
+      onClick={onClick}
+    >
+      <SlArrowRight style={{fontSize: '1.25rem'}} />
+    </div>
+  );
+}
+
+const SamplePrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, height: '100%', width: '1.5rem', display: 'flex', alignItems: 'center'}}
+      onClick={onClick}
+    >
+      <SlArrowLeft style={{fontSize: '1.25rem'}} />
+    </div>
+  );
+}
+
+
+const VideoSlider = ({videoData, borderColor}) => {
+
+  const settings = {
+    className: 'center',
+    infinite: true,
+    centerPadding: '60px',
+    slidesToShow: 4,
+    swipeToSlide: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    afterChange: (index) => {
+      console.log(`Slider Changed to: ${index + 1}, background: #222; color: #bada55`);
+    }
+  };
+
+  return (
+    <StyledDiv>
+      <Slider {...settings} >
+        {videoData.map((video, i) => <VideoCard key={i} video={video.video} image={video.image} borderColor={borderColor} />)}
+      </Slider>
+    </StyledDiv>
+  );
+};
+
+export default VideoSlider;

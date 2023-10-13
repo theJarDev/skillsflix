@@ -55,7 +55,7 @@
       "video": "https://www.youtube.com/watch?v=PztCEdIJITY",
       "image": "https://i.ytimg.com/vi/PztCEdIJITY/maxresdefault.jpg",
       "category": "Front End",
-      "description": "jaksskjsa",
+      "description": "¿A veces cuando estás programando sientes dificuldades en saber en qué momento utilizar let, var o const para declarar una variable? En este video te sacamos estas dudas, además de explicarte lo que es escopo global y local en JavaScript.",
       "id": "98765"
     },
     {
@@ -71,7 +71,7 @@
       "video": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
       "image": "https://i.ytimg.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
       "category": "Back End",
-      "description": "adadasfcvdascv",
+      "description": "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comunidad, lo que nos brinda muchísima documentación y ayuda.",
       "id": "97586"
     },
     {
@@ -94,7 +94,7 @@
       "title": "¿Por qué utilizar Java actualmente?",
       "video": "https://www.youtube.com/watch?v=3kNuK-XAHEY",
       "image": "https://i.ytimg.com/vi/3kNuK-XAHEY/maxresdefault.jpg",
-      "category": "Backend",
+      "category": "Back End",
       "description": "cdskjndjc",
       "id": "22222"
     },
@@ -103,7 +103,7 @@
       "video": "https://www.youtube.com/watch?v=vhwspfvI52k",
       "image": "https://i.ytimg.com/vi/vhwspfvI52k/maxresdefault.jpg",
       "category": "Soft Skills",
-      "description": "djadncdaa",
+      "description": "¿Qué son las Softskills y por qué es tan importante desarrollarlas para posicionarse en el mercado laboral? En este video de Alura Tips, Pri Stuani nos habla de las habilidades más buscadas por las empresas en sus profesionales y cómo las Soft Skills te ayudan en el día a día.",
       "id": "77777"
     },
     {
@@ -131,12 +131,84 @@
       "id": "44444"
     },
     {
+      "title": "¿Por qué estudiar Data Science?",
+      "video": "https://www.youtube.com/watch?v=7_UXo-aqAeM",
+      "image": "https://i.ytimg.com/vi/7_UXo-aqAeM/maxresdefault.jpg",
+      "category": "Data Science",
+      "description": "Estudiando Data Science podras crar modelos de aprendizaje automático para descubrir nuevos insights y resolver problemas de negocio complejos.",
+      "id": "72348"
+    },
+    {
       "title": "Python para Data Science",
       "video": "https://www.youtube.com/watch?v=JMKZMa0tMhQ",
       "image": "https://i.ytimg.com/vi/JMKZMa0tMhQ/maxresdefault.jpg",
       "category": "Data Science",
       "description": "Introduccion al lenguaje python enfocado a la ciencia de datos",
       "id": "87934"
+    },
+    {
+      "title": "¿Por qué utilizar React?",
+      "video": "https://www.youtube.com/watch?v=MnBNPA45NW8",
+      "image": "https://i.ytimg.com/vi/MnBNPA45NW8/maxresdefault.jpg",
+      "category": "Front End",
+      "description": "huvjsvohrsvfv",
+      "id": "82932"
+    },
+    {
+      "title": "Explorando el poder del Back-End",
+      "video": "https://www.youtube.com/watch?v=Z024LSCMqFk",
+      "image": "https://i.ytimg.com/vi/Z024LSCMqFk/maxresdefault.jpg",
+      "category": "Back End",
+      "description": "hjsdcfkjusdh",
+      "id": "98421"
+    },
+    {
+      "title": "Soft skills necesarias para trabajar",
+      "video": "https://www.youtube.com/watch?v=7lnmW8fB0nM",
+      "image": "https://i.ytimg.com/vi/7lnmW8fB0nM/maxresdefault.jpg",
+      "category": "Soft Skills",
+      "description": "sjhfvrdujvf",
+      "id": "97823"
+    },
+    {
+      "title": "Comunicación en el día a día",
+      "video": "https://www.youtube.com/watch?v=pOYyav4qx7o",
+      "image": "https://i.ytimg.com/vi/pOYyav4qx7o/maxresdefault.jpg",
+      "category": "Soft Skills",
+      "description": "hfewkofefwcv",
+      "id": "02389"
+    },
+    {
+      "title": "¿Qué son las metodologias ágiles?",
+      "video": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "image": "https://i.ytimg.com/vi/6N3OkLCfK-0/maxresdefault.jpg",
+      "category": "Soft Skills",
+      "description": "bjkcvhdsjkvcds",
+      "id": "78923"
+    },
+    {
+      "title": "Descubre el poder del Machine Learning",
+      "video": "https://www.youtube.com/watch?v=edS0Fhg0xyM",
+      "image": "https://i.ytimg.com/vi/edS0Fhg0xyM/maxresdefault.jpg",
+      "category": "Data Science",
+      "description": "sjihvgosrfv",
+      "id": "02835"
+    },
+    {
+      "title": "Descomplicando Base de Datos",
+      "video": "https://www.youtube.com/watch?v=G1cDRqKuxpg",
+      "image": "https://i.ytimg.com/vi/G1cDRqKuxpg/maxresdefault.jpg",
+      "category": "Data Science",
+      "description": "hnjrkslfgvvs",
+      "id": "08359"
+    },
+    {
+      "title": "Descubre el poder de Python",
+      "video": "https://www.youtube.com/watch?v=BxcMMgmLKTU",
+      "image": "https://i.ytimg.com/vi/BxcMMgmLKTU/maxresdefault.jpg",
+      "category": "Data Science",
+      "description": "voujshdfdsd",
+      "id": "79423"
     }
   ]
 }

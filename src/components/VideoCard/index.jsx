@@ -4,19 +4,23 @@ import img from "../../assets/img/card0.jfif";
 
 const Card = styled.a`
     /* margin-right: 1.35rem; */
+        
 
     .img {
-        width: 27rem;
-        height: 16.30313rem;
+        max-width: 27rem;
+        max-height: 16rem;
+        /* max-width: 18rem;
+        max-height: 10rem; */
         border-radius: 0.25rem;
-        border: 4px solid ${colorFrontEnd};
+        border: 4px solid ${({bordercolor}) => bordercolor};
     }
 `;
 
-const VideoCard = () => {
+const VideoCard = ({video, image, borderColor}) => {
+
     return (
-        <Card href="https://www.youtube.com/watch?v=PztCEdIJITY" target="_blank">
-            <img className="img" src={img} />
+        <Card href={video} bordercolor={borderColor} target="_blank">
+            <img className="img" src={image} />
         </Card>
     )
 }

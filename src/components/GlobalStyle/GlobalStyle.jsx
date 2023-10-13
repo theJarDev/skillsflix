@@ -2,6 +2,10 @@ import {createGlobalStyle} from 'styled-components';
 import { colorBlackDark, colorGrayLight } from '../UI/variables';
 
 const GlobalStyle = createGlobalStyle`
+    :root{
+        font-size: 16px;
+    }
+
     * {
     /* background-color: ${colorBlackDark}; */
     box-sizing: border-box;
@@ -12,10 +16,14 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     text-decoration: none;
     color: ${colorGrayLight};
+    
+    .slick-prev:before, .slick-next:before {
+        display: none;
+    }
     /* overflow-x: hidden; */
     }
     body {
-        background-color: ${colorBlackDark};
+        background-color: #090910;
     }
 `;
 
