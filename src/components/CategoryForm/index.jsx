@@ -2,12 +2,15 @@ import { useState, useContext } from "react";
 import { DataContext } from "../../context/DataContext";
 import styled from "styled-components";
 import TextField from "@mui/material/TextField";
-import { colorBlackDark, colorBlackLighter, colorGrayDark, colorGrayMedium, colorPrimary } from "../UI/variables";
+import { styleProps, colorBlackDark, colorBlackLighter, colorGrayDark, colorGrayMedium, colorPrimary } from "../UI/variables";
 import { TitleBig, Btn } from "../UI";
 import { addCategoryAxios } from "../../api/api";
 import { nameValidation, descriptionValidation, colorValidation, idValidation } from "../../validations/categoryForm";
 
 export const StyledForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
     width: 100%;
     padding: 3rem 2.5rem;
     text-align: center;
@@ -22,13 +25,17 @@ export const StyledForm = styled.form`
         gap: 2.5rem;
     }
 
-`;
+    @media (max-width: 767px) {
+        padding: 1rem;
 
-export const styleProps = {
-    backgroundColor: `${colorGrayMedium}`,
-    marginBottom: '4rem',
-    borderRadius: '4px',
-}
+        .flex-buttons div {
+            width: 100%;
+            justify-content: space-between;
+            gap: 0;
+        }
+    }
+
+`;
 
 const CategoryForm = () => {
     const [name, setName] = useState({value: '', valid: true});

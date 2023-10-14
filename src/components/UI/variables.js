@@ -30,6 +30,6 @@ export const colorMarketing = '#6B5BE2';
 
 export const styleProps = {
     backgroundColor: `${colorGrayMedium}`,
-    marginBottom: '4rem',
+    // marginBottom: '4rem',
     borderRadius: '4px',
 };

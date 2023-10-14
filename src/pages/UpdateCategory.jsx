@@ -4,9 +4,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import { updateCategoryAxios } from "../api/api";
 import { nameValidation, descriptionValidation, colorValidation } from "../validations/categoryForm";
-import { StyledForm, styleProps } from "../components/CategoryForm";
+import { StyledForm } from "../components/CategoryForm";
 import { TitleBig, Btn } from "../components/UI";
-import { colorPrimary, colorBlackLighter, colorBlackDark } from "../components/UI/variables";
+import { styleProps, colorPrimary, colorBlackLighter, colorBlackDark } from "../components/UI/variables";
 
 const UpdateCategory = () => {
     const [name, setName] = useState({value: '', valid: true});

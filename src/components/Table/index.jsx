@@ -6,7 +6,11 @@ import { colorBlackDark, colorGrayLight, colorGrayMedium, colorPrimary } from '.
 import { Link } from 'react-router-dom';
 
 const TableContainer = styled.div`
-    padding: 0 2.5rem;
+    padding: 2rem 2.5rem;
+
+    @media (max-width: 767px) {
+        padding: 1rem;
+    }
 `;
 
 const StyledTable = styled.table`
@@ -36,6 +40,19 @@ const StyledTable = styled.table`
     text-align: center;
   }
 
+  @media (max-width: 767px) {
+    
+    th, td {
+        padding: 0.5rem 0.25rem;
+    }
+    th {
+        font-size: 1.375rem;
+    }
+    td {
+        /* font-size: 1rem; */
+    }
+  }
+
 `;
 
 const StyledBtn = styled.button`
@@ -46,6 +63,10 @@ const StyledBtn = styled.button`
     background: none;
     border: none;
     cursor: pointer;
+
+    @media (max-width: 767px) {
+        font-size: 1.25rem;
+    }
 `;
 
 const StyledDiv = styled.div`
@@ -54,6 +75,10 @@ const StyledDiv = styled.div`
     font-size: 1.5rem;
     font-weight: 300;
     width: fit-content;
+    
+    @media (max-width: 767px) {
+        font-size: 1.25rem;
+    }
 `;
 
 const Table = () => {
@@ -64,13 +89,15 @@ const Table = () => {
         deleteCategoryAxios(id);
     }
 
+    const responsive = screen.availWidth > 767;
+
     return (
         <TableContainer>
             <StyledTable>
                 <thead>
                     <tr>
                         <th>Nombre</th>
-                        <th>Descripción</th>
+                        {responsive && <th>Descripción</th>}
                         <th className='center'>Editar</th>
                         <th className='center'>Remover</th>
                     </tr>
@@ -80,7 +107,7 @@ const Table = () => {
                         return (
                             <tr key={i}>
                                 <td><StyledDiv color={cat.color}>{cat.name}</StyledDiv></td>
-                                <td>{cat.description}</td>
+                                {responsive && <td>{cat.description}</td>}
                                 <td>
                                     <Link to={`/update-category/${cat.id}`}>
                                         <StyledBtn type='button'>Editar</StyledBtn>

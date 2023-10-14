@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Logo } from "../UI";
+import { LogoFooter } from "../UI";
 import logo from '../../assets/img/logo.png';
 import { colorBlackDark, colorPrimary } from "../UI/variables";
 
@@ -17,7 +17,7 @@ const StyledFooter = styled.footer`
 const Footer = () => {
     return (
         <StyledFooter>
-            <Logo src={logo} width='17rem' />
+            <LogoFooter src={logo}/>
         </StyledFooter>
     );
 }

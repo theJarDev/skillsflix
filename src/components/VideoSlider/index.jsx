@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 // import 'slick-carousel/slick/slick';
@@ -39,7 +40,6 @@ const SamplePrevArrow = (props) => {
   );
 }
 
-
 const VideoSlider = ({videoData, borderColor}) => {
 
   const settings = {
@@ -50,9 +50,26 @@ const VideoSlider = ({videoData, borderColor}) => {
     swipeToSlide: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    afterChange: (index) => {
-      console.log(`Slider Changed to: ${index + 1}, background: #222; color: #bada55`);
-    }
+    responsive: [
+      {
+        breakpoint: 1439,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 969,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 679,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   };
 
   return (

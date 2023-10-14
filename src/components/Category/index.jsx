@@ -18,6 +18,21 @@ const CategoryContainer = styled.section`
         align-items: center;
         gap: 1rem;
     }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        gap: 1rem;
+        .flex p {
+            display: none;
+        }
+    }
+
+    @media (max-width: 767px) {
+        gap: 1rem;
+
+        .flex p {
+            display: none;
+        }
+    }
 `;
 
 const Category = ({categoryData, videoData}) => {

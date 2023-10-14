@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import banner from '../assets/img/banner.jfif';
 import imgBanner from '../assets/img/imgbanner.jfif';
 import { TitleBig, TitleMedium } from "../components/UI";
-import { colorBackEnd, colorBlackDark, colorFrontEnd, colorGrayLight, colorSoftSkills } from "../components/UI/variables";
+import { colorPrimary, colorBlackDark, colorGrayLight, colorSoftSkills } from "../components/UI/variables";
 import Category from "../components/Category";
 import BannerSlider from "../components/BannerSlider";
 
@@ -15,11 +15,15 @@ const MainContainer = styled.main`
 
 const ButtonContainer = styled.div`
     position: relative;
+    
+    @media (max-width: 767px) {
+        display: none;
+    }
 `;
 
 const Container = styled.div`
     position: relative;
-    z-index: -1;
+    /* z-index: -1; */
 `;
 
 const BtnNuevoVideo = styled.button`
@@ -38,11 +42,38 @@ const BtnNuevoVideo = styled.button`
 
 const StyledDiv = styled.div`
     margin-top: -10.5rem;
+    position: relative;
+    /* z-index: 1; */
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        margin-top: -10.5rem;
+    }
+
+    @media (max-width: 767px) {
+        margin-top: -6rem;
+    }
 `;
-// const AbsoluteContainer = styled.div`
-//     position: absolute;
-//     z-index: -1;
-// `;
+
+const NewVideoMobileBtn = styled.button`
+    display: none;
+
+    @media (max-width: 767px) {
+        display: block;
+        background-color: ${colorPrimary};
+        width: calc(100% - 2rem);
+        /* width: 100%; */
+        text-align: center;
+        font-size: 1.375rem;
+        font-weight: 600;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 1rem 0;
+        margin-left: 1rem;
+        margin-top: 6rem;
+        margin-bottom: -4rem;
+    }
+`;
 
 const Home = () => {
 
@@ -63,6 +94,9 @@ const Home = () => {
             <StyledDiv>
                 {categories.map((cat, i) => <Category key={i} categoryData={cat} videoData={videos.filter((video) => video.category === cat.name )} />)}
             </StyledDiv>
+            <Link to='add-video'>
+                <NewVideoMobileBtn>Nuevo video</NewVideoMobileBtn>
+            </Link>
         </MainContainer>
     );
 }

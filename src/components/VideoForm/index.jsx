@@ -13,17 +13,40 @@ import { styleProps, colorBlackDark, colorBlackLighter, colorGrayDark, colorGray
 import { TitleBig, Btn } from "../UI";
 
 const StyledForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
     width: 100%;
     padding: 3rem 2.5rem;
 
     .flex-buttons {
         display: flex;
         justify-content: space-between;
+        /* gap: 3rem; */
     }
 
     .flex-buttons div {
         display: flex;
         gap: 2.5rem;
+    }
+
+    @media (max-width: 767px) {
+        padding: 1rem;
+
+        .flex-buttons {
+            flex-direction: column;
+            gap: 6rem;
+            margin-bottom: -4rem;
+        }
+
+        .flex-buttons div {
+            justify-content: space-between;
+            gap: 0;
+        }
+
+        .flex-buttons .new-category {
+            width: 100%;
+        }
     }
 
 `;
@@ -171,7 +194,7 @@ const VideoForm = () => {
                     </Btn>
                 </div>
                 <Link to={'/add-category'}>
-                    <Btn type="button" background={colorPrimary} color={'white'}>Nueva Categoria</Btn>
+                    <Btn className="new-category" type="button" background={colorPrimary} color={'white'}>Nueva Categoria</Btn>
                 </Link>
             </div>
         </StyledForm>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { colorBlackDark, colorPrimary } from "../UI/variables";
 import logo from '../../assets/img/logo.png';
-import { Logo } from "../UI";
+import { LogoHeader } from "../UI";
 
 const StyledHeader = styled.header`
     display: flex;
@@ -12,13 +12,18 @@ const StyledHeader = styled.header`
     width: 100%;
     height: 5.875rem;
     border-bottom: 2px solid ${colorPrimary};
+
+    @media (max-width: 767px) {
+        justify-content: center;
+        height: 4.5rem;
+    }
 `;
 
 const Header = () => {
     return (
         <StyledHeader>
             <Link to={'/'}>
-                <Logo src={logo} marginleft='2.5rem' width='12rem' />
+                <LogoHeader src={logo}/>
             </Link>
         </StyledHeader>
     );
