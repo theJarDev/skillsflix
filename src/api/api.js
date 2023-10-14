@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getCategoriesAxios = async(setData) => {
     try {
-        const res = await axios.get('http://localhost:3000/categories');
+        const res = await axios.get('https://json-server-skillsflix.vercel.app/categories');
         setData(res.data);
     } catch (err) {
         console.log(err);
@@ -11,7 +11,7 @@ export const getCategoriesAxios = async(setData) => {
 
 export const getVideosAxios = async(setData) => {
     try {
-        const res = await axios.get('http://localhost:3000/videos');
+        const res = await axios.get('https://json-server-skillsflix.vercel.app/videos');
         setData(res.data);
     } catch (err) {
         console.log(err);
@@ -21,7 +21,7 @@ export const getVideosAxios = async(setData) => {
 export const addCategoryAxios = async(data) => {
     try {
         
-        const res = await axios.post('http://localhost:3000/categories', {...data});
+        const res = await axios.post('https://json-server-skillsflix.vercel.app/categories', {...data});
         console.log('categoria creada! ', res);
     } catch (err) {
         console.error(err);
@@ -30,7 +30,7 @@ export const addCategoryAxios = async(data) => {
 
 export const addVideoAxios = async(data) => {
     try {
-        await axios.post('http://localhost:3000/videos', {...data});
+        await axios.post('https://json-server-skillsflix.vercel.app/videos', {...data});
         console.log('categoria creada!');
     } catch (err) {
         console.log(err);
@@ -39,7 +39,7 @@ export const addVideoAxios = async(data) => {
 
 export const updateCategoryAxios = async(id, data) => {
     try {
-        await axios.put(`http://localhost:3000/categories/${id}`, {...data});
+        await axios.put(`https://json-server-skillsflix.vercel.app/categories/${id}`, {...data});
         console.log('categoria actualizada!');
     } catch (err) {
         console.log(err);
@@ -48,7 +48,7 @@ export const updateCategoryAxios = async(id, data) => {
 
 export const deleteCategoryAxios = async(id) => {
     try {
-        await axios.delete(`http://localhost:3000/categories/${id}`);
+        await axios.delete(`https://json-server-skillsflix.vercel.app/categories/${id}`);
         console.log('categoria eliminada!');
         
     } catch (err) {
