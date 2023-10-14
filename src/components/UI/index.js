@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { colorBackEnd, colorFrontEnd } from "./variables";
 
 export const LogoHeader = styled.img`
     margin-left: 2.5rem;
@@ -30,7 +29,6 @@ export const TitleBannerMobile = styled.h2`
         background-color: ${({background}) => background };
         border-radius: 0.25rem;
         font-size: 3rem;
-        /* margin-bottom: 0.5rem; */
         padding: .5rem 1rem;
     }
 `;
@@ -89,7 +87,6 @@ export const Btn = styled.button`
     text-align: center;
     padding: 0.75rem 2.5rem;
     font-family: 'Source Sans 3', sans-serif;
-    /* font-size: 1.3125rem; */
     font-weight: 600;
     border: none;
     border-radius: 5px;

@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 import { DataContext } from "../../context/DataContext";
 import { deleteCategoryAxios } from '../../api/api';
-import { colorBlackDark, colorGrayLight, colorGrayMedium, colorPrimary } from '../UI/variables';
+import { colorPrimary } from '../UI/variables';
 import { Link } from 'react-router-dom';
 
 const TableContainer = styled.div`
@@ -17,14 +17,12 @@ const StyledTable = styled.table`
   width: 100%;
   border-collapse: collapse;
   border: 4px solid ${colorPrimary};
-  /* outline-color: ${colorPrimary}; */
 
   th, td {
     padding: 18px 8px;
   }
 
   th {
-    /* background-color: #f2f2f2; */
     text-align: start;
     border: 4px solid ${colorPrimary};
     font-size: 2rem;
@@ -47,9 +45,6 @@ const StyledTable = styled.table`
     }
     th {
         font-size: 1.375rem;
-    }
-    td {
-        /* font-size: 1rem; */
     }
   }
 

@@ -1,18 +1,7 @@
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import styled from "styled-components";
-import { TitleBig, TitleMedium } from "../UI";
-import { colorFrontEnd, colorBackEnd, colorSoftSkills, colorDataScience, colorBlackDark } from "../UI/variables";
-import imgBanner from '../../assets/img/imgbanner.jfif';
-import banner from '../../assets/img/banner.jfif';
 import BannerItem from "../BannerItem";
-
-
-const StyledDiv = styled.div`
-  position: absolute;
-  z-index: -1;
-`;
 
 const SampleNextArrow = (props) => {
     const { className, style, onClick } = props;

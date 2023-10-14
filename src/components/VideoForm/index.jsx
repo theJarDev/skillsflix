@@ -9,7 +9,7 @@ import Select from '@mui/material/Select';
 import FormHelperText from "@mui/material/FormHelperText";
 import { addVideoAxios } from "../../api/api";
 import { titleValidation, videoValidation, imageValidation, categoryValidation, descriptionValidation, idValidation } from "../../validations/videoForm";
-import { styleProps, colorBlackDark, colorBlackLighter, colorGrayDark, colorGrayMedium, colorPrimary } from "../UI/variables";
+import { styleProps, colorBlackDark, colorBlackLighter, colorGrayMedium, colorPrimary } from "../UI/variables";
 import { TitleBig, Btn } from "../UI";
 
 const StyledForm = styled.form`
@@ -22,7 +22,6 @@ const StyledForm = styled.form`
     .flex-buttons {
         display: flex;
         justify-content: space-between;
-        /* gap: 3rem; */
     }
 
     .flex-buttons div {
@@ -61,7 +60,6 @@ const VideoForm = () => {
     const [id, setId] = useState({value: '', valid: true});
 
     const {categories, videos} = useContext(DataContext);
-    // const categoryNames = categories.map( (cat) => cat.name );
     const videoIds = videos.map( (video) => video.id );
     
     const handleSubmit = (event) => {
@@ -138,16 +136,12 @@ const VideoForm = () => {
                     labelId="label"
                     id="demo-simple-select-filled"
                     native
-                    // sx={{color: `${colorGrayDark}`}}
                     value={category.value}
                     onChange={(e) => handleChange(e, setCategory)}
                     onBlur={(e) => handleBlur(e, setCategory, categoryValidation)}
                 >
                     <option value=' ' disabled defaultValue=' ' hidden >Seleccionar categoria</option>
                     {categories.map( (cat, i) => <option style={{background: `${colorGrayMedium}`}} key={i} value={cat.name}>{cat.name}</option> )}
-                    {/* <option style={{background: `${colorGrayMedium}`}} value={'Front End'}>Front End</option>
-                    <option style={{background: `${colorGrayMedium}`}} value={'Back End'}>Back End</option>
-                    <option style={{background: `${colorGrayMedium}`}} value={'Soft Skills'}>Soft Skills</option> */}
                 </Select>
                 {!category.valid && <FormHelperText>Seleccione una categoria</FormHelperText>}
             </FormControl>

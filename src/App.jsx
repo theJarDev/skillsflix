@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { DataProvider } from "./context/DataContext";
-import styled from "styled-components";
 import Home from "./pages/Home";
 import AddVideo from "./pages/AddVideo";
 import AddCategory from "./pages/AddCategory";

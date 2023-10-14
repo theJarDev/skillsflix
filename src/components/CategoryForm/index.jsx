@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { DataContext } from "../../context/DataContext";
 import styled from "styled-components";
 import TextField from "@mui/material/TextField";
-import { styleProps, colorBlackDark, colorBlackLighter, colorGrayDark, colorGrayMedium, colorPrimary } from "../UI/variables";
+import { styleProps, colorBlackDark, colorBlackLighter, colorPrimary } from "../UI/variables";
 import { TitleBig, Btn } from "../UI";
 import { addCategoryAxios } from "../../api/api";
 import { nameValidation, descriptionValidation, colorValidation, idValidation } from "../../validations/categoryForm";

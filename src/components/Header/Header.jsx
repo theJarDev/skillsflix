@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { colorBlackDark, colorPrimary } from "../UI/variables";
-import logo from '../../assets/img/logo.png';
+import { colorPrimary } from "../UI/variables";
+import logo from '../../assets/img/logo.webp';
 import { LogoHeader } from "../UI";
 
 const StyledHeader = styled.header`
     display: flex;
     align-items: center;
-    /* background-color: ${colorBlackDark}; */
     background-color: #090910;
     width: 100%;
     height: 5.875rem;

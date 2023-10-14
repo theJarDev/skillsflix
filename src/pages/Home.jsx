@@ -2,16 +2,9 @@ import { useContext } from "react";
 import { DataContext } from '../context/DataContext';
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import banner from '../assets/img/banner.jfif';
-import imgBanner from '../assets/img/imgbanner.jfif';
-import { TitleBig, TitleMedium } from "../components/UI";
-import { colorPrimary, colorBlackDark, colorGrayLight, colorSoftSkills } from "../components/UI/variables";
+import { colorPrimary, colorGrayLight } from "../components/UI/variables";
 import Category from "../components/Category";
 import BannerSlider from "../components/BannerSlider";
-
-const MainContainer = styled.main`
-    /* background-color: ${colorBlackDark}; */
-`;
 
 const ButtonContainer = styled.div`
     position: relative;
@@ -80,7 +73,7 @@ const Home = () => {
     const {categories, videos} = useContext(DataContext);
 
     return (
-        <MainContainer>
+        <main>
             <Link to='/add-video'>
                 <ButtonContainer>
                     <BtnNuevoVideo>
@@ -97,7 +90,7 @@ const Home = () => {
             <Link to='add-video'>
                 <NewVideoMobileBtn>Nuevo video</NewVideoMobileBtn>
             </Link>
-        </MainContainer>
+        </main>
     );
 }
 

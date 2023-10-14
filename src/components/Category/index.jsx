@@ -1,7 +1,4 @@
-import { useContext, useState, useEffect } from "react";
-import { DataContext } from '../../context/DataContext';
 import styled from "styled-components";
-import VideoCarrusel from "../VideoCarrusel";
 import VideoSlider from "../VideoSlider";
 import { TitleSmall } from "../UI";
 

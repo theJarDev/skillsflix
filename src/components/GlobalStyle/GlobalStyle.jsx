@@ -1,5 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
-import { colorBlackDark, colorGrayLight } from '../UI/variables';
+import { colorGrayLight } from '../UI/variables';
 
 const GlobalStyle = createGlobalStyle`
     :root{
@@ -7,7 +7,6 @@ const GlobalStyle = createGlobalStyle`
     }
 
     * {
-    /* background-color: ${colorBlackDark}; */
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 1.125rem;
@@ -20,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
     .slick-prev:before, .slick-next:before {
         display: none;
     }
-    /* overflow-x: hidden; */
     }
     body {
         background-color: #090910;

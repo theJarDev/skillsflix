@@ -1,38 +1,20 @@
 import { useState } from "react";
 import styled from "styled-components";
-import Slider from "react-slick";
 import { TitleBig, TitleMedium, TitleBannerMobile } from "../UI";
-import { colorBlackDark, colorFrontEnd } from "../UI/variables";
-import banner from '../../assets/img/banner.jfif';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import VideoCard from "../VideoCard";
-import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
-import VideoSlider from "../VideoSlider";
-
-const StyledDiv = styled.div`
-    width: 100%;
-    padding-right: 2.5rem;
-    padding-left: 2.5rem;
-    margin-top: -4rem;
-`;
+import banner from '../../assets/img/banner.webp';
 
 const Banner = styled.section`
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     gap: 1.5rem;
-    /* gap: 20rem; */
     padding-bottom: 11rem;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
-    /* padding-right: 3.25rem; */
-    /* background-image: url(${banner}); */
     background: linear-gradient(180deg, rgba(2, 50, 84, 0.3) 41.15%, rgba(9, 9, 16, 1) 100%), url(${banner}), lightgray 50% / cover no-repeat;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* filter: opacity(.3); */
     width: 100%;
     height: 50rem;
 
@@ -100,9 +82,7 @@ const BannerImg = styled.a`
 
 const BannerItem = ({categoryData, videoData}) => {
     const [index, setIndex] = useState(0);
-    // const selectedVideo = videoData.shift();
     const selectedVideo = videoData[index];
-    // console.log(videoData);
 
     return (
     <>

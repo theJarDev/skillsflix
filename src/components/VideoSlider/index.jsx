@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
-// import 'slick-carousel/slick/slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import VideoCard from "../VideoCard";
@@ -11,8 +9,6 @@ const StyledDiv = styled.div`
   width: 100%;
   padding-right: 2.5rem;
 `;
-
-//, height: '100%', width: '1.5rem', display: 'flex', alignItems: 'center'
 
 const SampleNextArrow = (props) => {
   const { className, style, onClick } = props;
